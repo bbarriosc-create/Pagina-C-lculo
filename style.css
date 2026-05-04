@@ -95,3 +95,50 @@ body{
     padding: 20px;
     border-radius: 10px;
 }
+.menu{
+    background-color: rgba(0,0,0,0.7);
+
+    padding: 15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: sticky;
+
+    top: 0;
+}
+
+.logo{
+    color: white;
+}
+
+.menu ul{
+    list-style: none;
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.menu a{
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #38BDF8;
+}
+
+.footer{
+    text-align: center;
+
+    padding: 30px;
+
+    color: white;
+}
