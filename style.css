@@ -192,3 +192,164 @@ body{
 
     color: white;
 }
+.pagina-universo{
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background-image: url(fondo-universo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+/* CAPA OSCURA */
+
+.overlay{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.55);
+
+    z-index: 0;
+}
+
+/* CONTENIDO */
+
+.contenido-universo{
+    position: relative;
+
+    z-index: 1;
+
+    width: 90%;
+    max-width: 1200px;
+
+    text-align: center;
+
+    color: white;
+}
+
+/* TITULO */
+
+.titulo-principal{
+    font-size: 70px;
+
+    margin-bottom: 10px;
+
+    text-shadow: 0 0 20px rgba(56,189,248,0.5);
+}
+
+.subtitulo{
+    font-size: 22px;
+
+    margin-bottom: 60px;
+
+    color: #D1D5DB;
+}
+
+/* BOTONES */
+
+.contenedor-botones{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.tarjeta-boton{
+    text-decoration: none;
+
+    color: white;
+
+    padding: 40px 25px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    transition: 0.4s;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* ANIMACION HOVER */
+
+.tarjeta-boton:hover{
+    transform: translateY(-10px) scale(1.04);
+
+    background: rgba(56,189,248,0.15);
+
+    box-shadow: 0 0 25px rgba(56,189,248,0.5);
+}
+
+.tarjeta-boton h2{
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.tarjeta-boton p{
+    color: #E5E7EB;
+
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+    .titulo-principal{
+        font-size: 45px;
+    }
+
+    .subtitulo{
+        font-size: 18px;
+    }
+
+    .tarjeta-boton{
+        padding: 30px 20px;
+    }
+
+}
+/* PAGINA DEFINICIONES ARREGLAR */
+
+.pagina-definiciones{
+
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #0F172A;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
