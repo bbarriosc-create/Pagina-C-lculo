@@ -4,72 +4,529 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Definiciones</title>
+    <title>Funciones Matemáticas</title>
 
-    <!-- FUENTE -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- TIPOGRAFIA -->
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- ESTILOS -->
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#f4f6f9;
+            color:#222;
+            line-height:1.8;
+        }
+
+        /* HEADER */
+
+        header{
+            background:linear-gradient(135deg, #1e3a5f, #4f8cff);
+            color:white;
+            text-align:center;
+            padding:90px 20px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        header h1{
+            font-size:3.5rem;
+            margin-bottom:15px;
+        }
+
+        header p{
+            font-size:1.2rem;
+            opacity:0.9;
+        }
+
+        /* CONTENEDOR */
+
+        main{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            padding:50px 0;
+        }
+
+        /* SECCIONES */
+
+        .seccion{
+            background:white;
+            margin-bottom:35px;
+            padding:35px;
+            border-radius:22px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .seccion:hover{
+            transform:translateY(-5px);
+        }
+
+        /* TITULOS */
+
+        .seccion h2{
+            color:#1e3a5f;
+            margin-bottom:20px;
+            border-left:6px solid #4f8cff;
+            padding-left:15px;
+            font-size:2rem;
+        }
+
+        .seccion p{
+            margin-bottom:20px;
+        }
+
+        /* FORMULAS */
+
+        .formula{
+            background:#eef4ff;
+            color:#1e3a5f;
+            padding:20px;
+            border-radius:15px;
+            text-align:center;
+            font-size:1.5rem;
+            font-weight:bold;
+            margin:25px 0;
+            overflow-x:auto;
+        }
+
+        /* LISTAS */
+
+        ul{
+            padding-left:25px;
+            margin-top:15px;
+        }
+
+        li{
+            margin-bottom:10px;
+        }
+
+        /* GRID */
+
+        .grid-tipos{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+            gap:25px;
+            margin-top:30px;
+        }
+
+        .tipo{
+            background:#f8fbff;
+            border:1px solid #dbe7ff;
+            padding:25px;
+            border-radius:18px;
+            transition:0.3s;
+        }
+
+        .tipo:hover{
+            transform:scale(1.03);
+        }
+
+        .tipo h3{
+            color:#1e3a5f;
+            margin-bottom:15px;
+        }
+
+        /* BOTON */
+
+        .contenedor-boton{
+            text-align:center;
+            margin:60px 0;
+        }
+
+        .boton-volver{
+            background:#1e3a5f;
+            color:white;
+            text-decoration:none;
+            padding:15px 35px;
+            border-radius:12px;
+            font-weight:bold;
+            transition:0.3s;
+            display:inline-block;
+        }
+
+        .boton-volver:hover{
+            background:#4f8cff;
+            transform:scale(1.05);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size:2.5rem;
+            }
+
+            .seccion{
+                padding:25px;
+            }
+
+            .seccion h2{
+                font-size:1.6rem;
+            }
+
+            .formula{
+                font-size:1.2rem;
+            }
+
+        }
+
+    </style>
 
 </head>
 
-<body class="pagina-definiciones">
+<body>
 
-    <!-- FONDO OSCURO -->
+    <!-- HEADER -->
 
-    <div class="overlay"></div>
+    <header>
+
+        <h1>Funciones Matemáticas</h1>
+
+        <p>
+            Conceptos fundamentales, elementos y tipos de funciones matemáticas
+        </p>
+
+    </header>
 
     <!-- CONTENIDO -->
 
-    <div class="contenedor-definicion">
+    <main>
 
-        <h1>
-            ¿Qué es una función?
-        </h1>
+        <!-- DEFINICION -->
 
-        <p>
-            Una función es una relación entre dos variables.<br>
-            Es simplemente una máquina, en donde yo le doy una orden.
-            No importa cuál sea el número que yo introduzca <br>
-            Supongamos que yo le digo: “Te voy a meter un número y quiero que realices una operación”.<br>
-                    Entonces lo que hará esa máquina será reemplazar la x por el número que le estoy dando.
-        </p>
+        <section class="seccion">
 
-        <div class="formula">
-            
-        f(x)=2x²−4x+1
+            <h2>📘 ¿Qué es una función?</h2>
 
-        </div>
+            <p>
+                Es un tipo de relación (correspondencia) que existe entre dos variables,
+                con la condición de que a cada valor de la variable independiente
+                le corresponde un único valor de la variable dependiente.
+            </p>
 
-        <p>
-            Por ejemplo:
-            <br><br>
+            <p>
+                Una función puede imaginarse como una máquina:
+                recibe un número, realiza una operación y devuelve un resultado.
+            </p>
 
-            Si x = 3
-            <br>
+            <p>
+                Por ejemplo:
+                si introducimos un número y queremos multiplicarlo por 2
+                y luego sumarle 5, la función realizará exactamente ese proceso.
+            </p>
 
-            Entonces:
-        </p>
+            <div class="formula">
 
-        <div class="formula">
-            f(3)=2(3)²−4(3)+1
-        </div>
+                \( f(x)=2x+5 \)
+
+            </div>
+
+            <p>
+                En matemáticas:
+            </p>
+
+            <ul>
+
+                <li>x → variable independiente</li>
+
+                <li>y → variable dependiente</li>
+
+            </ul>
+
+        </section>
+
+        <!-- ELEMENTOS -->
+
+        <section class="seccion">
+
+            <h2>📗 Elementos para definir una función</h2>
+
+            <p>
+                Para construir una función es necesario tener:
+            </p>
+
+            <ul>
+
+                <li>Un dominio</li>
+
+                <li>Un codominio</li>
+
+                <li>Una regla de correspondencia</li>
+
+            </ul>
+
+        </section>
+
+        <!-- CONCEPTOS -->
+
+        <section class="seccion">
+
+            <h2>📙 Conceptos básicos</h2>
+
+            <ul>
+
+                <li>Dominio</li>
+
+                <li>Codominio</li>
+
+                <li>Rango o imagen</li>
+
+                <li>Variable independiente</li>
+
+                <li>Variable dependiente</li>
+
+            </ul>
+
+        </section>
+
+        <!-- DOMINIO -->
+
+        <section class="seccion">
+
+            <h2>📕 Dominio</h2>
+
+            <p>
+                Es el conjunto de valores que puede tomar
+                la variable independiente.
+            </p>
+
+            <p>
+                Ejemplo:
+            </p>
+
+            <div class="formula">
+
+                \( f(x)=\sqrt{x} \)
+
+            </div>
+
+            <p>
+                El dominio son todos los números reales positivos
+                y el cero, porque no existe raíz cuadrada real
+                de números negativos.
+            </p>
+
+        </section>
+
+        <!-- CODOMINIO -->
+
+        <section class="seccion">
+
+            <h2>📒 Codominio</h2>
+
+            <p>
+                Es el conjunto donde pueden encontrarse
+                todos los posibles resultados de la función.
+            </p>
+
+        </section>
+
+        <!-- RANGO -->
+
+        <section class="seccion">
+
+            <h2>📓 Rango o imagen</h2>
+
+            <p>
+                Son los valores que realmente obtiene
+                la función después de evaluar el dominio.
+            </p>
+
+        </section>
+
+        <!-- VARIABLES -->
+
+        <section class="seccion">
+
+            <h2>📔 Variables</h2>
+
+            <p>
+                La variable independiente es el valor
+                que se introduce en la función y normalmente
+                se representa con x.
+            </p>
+
+            <p>
+                La variable dependiente es el resultado obtenido
+                y generalmente se representa con y.
+            </p>
+
+        </section>
+
+        <!-- FORMA GENERAL -->
+
+        <section class="seccion">
+
+            <h2>📐 Forma general de una función lineal</h2>
+
+            <div class="formula">
+
+                \( f(x)=mx+b \)
+
+            </div>
+
+            <p>
+                Donde:
+            </p>
+
+            <ul>
+
+                <li>m = pendiente</li>
+
+                <li>b = punto donde la gráfica corta el eje y</li>
+
+            </ul>
+
+        </section>
+
+        <!-- EJEMPLO -->
+
+        <section class="seccion">
+
+            <h2>🧮 Ejemplo sencillo</h2>
+
+            <div class="formula">
+
+                \( f(x)=2x+3 \)
+
+            </div>
+
+            <p>
+                Si:
+            </p>
+
+            <div class="formula">
+
+                \( x=4 \)
+
+            </div>
+
+            <p>
+                Entonces:
+            </p>
+
+            <div class="formula">
+
+                \( f(4)=2(4)+3=11 \)
+
+            </div>
+
+        </section>
+
+        <!-- TIPOS -->
+
+        <section class="seccion">
+
+            <h2>📚 Tipos de funciones</h2>
+
+            <div class="grid-tipos">
+
+                <!-- LINEAL -->
+
+                <div class="tipo">
+
+                    <h3>Función lineal</h3>
+
+                    <div class="formula">
+
+                        \( f(x)=mx+b \)
+
+                    </div>
+
+                    <p>
+                        Su gráfica es una línea recta.
+                    </p>
+
+                </div>
+
+                <!-- CUADRATICA -->
+
+                <div class="tipo">
+
+                    <h3>Función cuadrática</h3>
+
+                    <div class="formula">
+
+                        \( f(x)=ax^2+bx+c \)
+
+                    </div>
+
+                    <p>
+                        Su gráfica tiene forma de parábola.
+                    </p>
+
+                </div>
+
+                <!-- EXPONENCIAL -->
+
+                <div class="tipo">
+
+                    <h3>Función exponencial</h3>
+
+                    <div class="formula">
+
+                        \( f(x)=a^x \)
+
+                    </div>
+
+                    <p>
+                        La variable se encuentra en el exponente.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- IMPORTANCIA -->
+
+        <section class="seccion">
+
+            <h2>🌎 Importancia de las funciones</h2>
+
+            <p>
+                Las funciones permiten modelar situaciones reales,
+                analizar cambios, predecir resultados y representar
+                relaciones matemáticas.
+            </p>
+
+            <p>
+                Son una de las bases más importantes
+                de las matemáticas, la física, la ingeniería
+                y muchas ciencias.
+            </p>
+
+        </section>
 
         <!-- BOTON -->
 
-        <a href="funciones.html" class="boton-volver">
-            Volver
-        </a>
+        <div class="contenedor-boton">
 
-    </div>
+            <a href="funciones.html" class="boton-volver">
+                Volver
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- MATHJAX -->
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </body>
 
