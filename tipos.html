@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Funciones Interactivas</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Tipos de Funciones Matemáticas</h1>
+        <p>Conceptos fundamentales, definiciones y gráficas dinámicas interactivas</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- 1. FUNCIÓN LINEAL -->
+        <section class="card">
+            <div class="card-info">
+                <div class="card-title-wrapper">
+                    <span class="title-bar"></span>
+                    <h2>Función Lineal</h2>
+                </div>
+                
+                <div class="tags-wrapper">
+                    <span class="tag tag-yes">✓ Inyectiva</span>
+                    <span class="tag tag-yes">✓ Sobreyectiva</span>
+                    <span class="tag tag-yes">✓ Biyectiva</span>
+                </div>
+
+                <p class="description">
+                    Una función lineal es una relación entre dos variables que, al representarse en un plano
+                    cartesiano, se grafica como una línea recta. Su expresión algebraica es de primer grado y se 
+                    escribe, de forma general.<br>
+                
+                    Además, es una función polinómica de grado uno. Se considera <strong> inyectiva </strong>porque a cada 
+                    elemento del dominio le corresponde un único elemento del codominio. También es 
+                    <strong>sobreyectiva</strong>, ya que puede tomar cualquier valor real como resultado. Debido a que cumple 
+                    ambas propiedades, también es una función <strong>biyectiva</strong>.
+                </p>
+                <div class="formula-box">
+                    f(x) = <span id="text-a-lineal">2</span>x <span id="text-b-lineal">+ 1</span>
+                </div>
+                <div class="controls-wrapper">
+                    <h3>Modificar Parámetros:</h3>
+                    <div class="input-group">
+                        <label>Pendiente (a):</label>
+                        <input type="number" id="input-a-lineal" value="2" step="0.5">
+                    </div>
+                    <div class="input-group">
+                        <label>Intersección (b):</label>
+                        <input type="number" id="input-b-lineal" value="1" step="0.5">
+                    </div>
+                </div>
+            </div>
+            <div class="card-graph">
+                <!-- Usamos Canvas para máxima compatibilidad -->
+                <canvas id="canvas-lineal" width="350" height="350" class="graph-canvas"></canvas>
+            </div>
+        </section>
+
+        <!-- 2. FUNCIÓN CUADRÁTICA -->
+        <section class="card">
+            <div class="card-info">
+                <div class="card-title-wrapper">
+                    <span class="title-bar"></span>
+                    <h2>Función Cuadrática</h2>
+                </div>
+
+                <div class="tags-wrapper">
+                    <span class="tag tag-no">✗ Inyectiva</span>
+                    <span class="tag tag-no">✗ Sobreyectiva</span>
+                    <span class="tag tag-no">✗ Biyectiva</span>
+                </div>
+
+                <p class="description">
+                    Una función cuadrática es una función polinómica de segundo grado que puede expresarse 
+                    de la siguiente manera: f(x)= ax² + bx + c <br>
+                    donde a, b y c son números reales, y a debe ser diferente de cero. Esta función se caracteriza 
+                    por contener un término cuadrático (x²) y su representación gráfica es una parábola, la cual
+                    puede abrirse hacia arriba o hacia abajo dependiendo del signo de a.
+                    Además, la función cuadrática no es <strong>inyectiva</strong>, ya que distintos valores de x pueden producir 
+                    el mismo valor de y debido a la simetría de la parábola. Tampoco es sobreyectiva en el 
+                    conjunto de los números reales, porque su gráfica tiene un vértice que limita los valores que 
+                    puede tomar en el eje y. Por esta razón, no todos los números reales pueden obtenerse como 
+                    resultado de la función.  
+                </p>
+                <div class="formula-box">
+                    f(x) = <span id="text-a-quad">1</span>x² <span id="text-b-quad">+ 0</span>x <span id="text-c-quad">+ 0</span>
+                </div>
+                <div class="controls-wrapper">
+                    <h3>Modificar Parámetros:</h3>
+                    <div class="input-group">
+                        <label>Coeficiente (a):</label>
+                        <input type="number" id="input-a-quad" value="1" step="0.5">
+                    </div>
+                    <div class="input-group">
+                        <label>Coeficiente (b):</label>
+                        <input type="number" id="input-b-quad" value="0" step="0.5">
+                    </div>
+                    <div class="input-group">
+                        <label>Constante (c):</label>
+                        <input type="number" id="input-c-quad" value="0" step="0.5">
+                    </div>
+                </div>
+            </div>
+            <div class="card-graph">
+                <canvas id="canvas-quad" width="350" height="350" class="graph-canvas"></canvas>
+            </div>
+        </section>
+
+        <!-- 3. FUNCIÓN EXPONENCIAL -->
+        <section class="card">
+            <div class="card-info">
+                <div class="card-title-wrapper">
+                    <span class="title-bar"></span>
+                    <h2>Función Exponencial</h2>
+                </div>
+
+                <div class="tags-wrapper">
+                    <span class="tag tag-yes">✓ Inyectiva</span>
+                    <span class="tag tag-no">✗ Sobreyectiva</span>
+                    <span class="tag tag-no">✗ Biyectiva</span>
+                </div>
+
+                <p class="description">
+                    Una función exponencial es aquella en la que la variable independiente x aparece en el 
+                    exponente, mientras que la base permanece constante. Su forma general se expresa como: f(x)=a<sup>x</sup>, a > 0, a≠1 <br>
+                    donde a es un número real positivo distinto de 1. Este tipo de función se caracteriza por 
+                    presentar un crecimiento o decrecimiento muy rápido, dependiendo del valor de la base. <br>
+                    Además, la función exponencial es <strong>inyectiva</strong> porque su comportamiento es estrictamente 
+                    creciente o decreciente, lo que significa que no repite valores de salida para distintos valores 
+                    de x. Sin embargo, no es <strong>sobreyectiva</strong> en el conjunto de los números reales, ya que sus 
+                    resultados siempre son positivos. Por ello, nunca toma valores negativos ni el valor cero en el 
+                    eje y.
+                <div class="formula-box">
+                    f(x) = <span id="text-a-exp">2</span><sup>x</sup>
+                </div>
+                <div class="controls-wrapper">
+                    <h3>Modificar Parámetros:</h3>
+                    <div class="input-group">
+                        <label>Base (a):</label>
+                        <input type="number" id="input-a-exp" value="2" min="0.1" step="0.1">
+                    </div>
+                </div>
+            </div>
+            <div class="card-graph">
+                <canvas id="canvas-exp" width="350" height="350" class="graph-canvas"></canvas>
+            </div>
+        </section>
+
+                <!-- BOTÓN PARA VOLVER AL MENÚ -->
+        <div class="menu-btn-container">
+            <a href="funciones.html" class="btn-back-menu">
+                <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Volver
+            </a>
+        </div>
+
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
