@@ -1410,4 +1410,11 @@ body {
 .btn-back-menu:active {
     transform: translateY(0);
 }
+/* Estilo matemático elegante para variables dentro del texto descriptivo */
+.description var {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 600; /* Le da un ligero realce */
+    color: inherit;   /* Mantiene exactamente el mismo color del texto que lo rodea */
+}
 
