@@ -66,14 +66,14 @@
             </div>
 
             <p>
-                En matemáticas:
+                <h4><strong>Matemáticas:</strong></h4>
             </p>
 
             <ul>
 
-                <li>x → variable independiente</li>
+                <li>\(x\) → variable independiente</li>
 
-                <li>y → variable dependiente</li>
+                <li>\(y\) → variable dependiente</li>
 
             </ul>
 
@@ -245,8 +245,9 @@
             <h2>📕 Dominio</h2>
 
             <p>
-                Es el conjunto de valores que puede tomar
-                la variable independiente.
+                Es el conjunto de valores que se le pueden dar a una función, es decir, los valores de entrada 
+                que la función puede recibir y procesar correctamente. <br>
+                Normalmente, estos valores pertenecen a la variable independiente, representada por la letra \(x\).
             </p>
 
             <div class="formula">
@@ -256,9 +257,14 @@
             </div>
 
             <p>
-                El dominio son todos los números reales positivos
+                En este caso el dominio son todos los números reales positivos
                 y el cero, porque no existe raíz cuadrada real
                 de números negativos.
+            </p>
+            <h4><strong>Expresión Matemática</strong></h4>
+            <p>
+                <strong>En Desigualdad:</strong> \(x \geq 0\)<br>
+                <strong>En Intervalo:</strong> \(\text{Dom}(f) = (0, +\infty)\)
             </p>
 
         </section>
@@ -316,7 +322,7 @@
 
             <div class="formula">
 
-                \( f(x)=mx+b \)
+                \( f(x)=ax+b \)
 
             </div>
 
@@ -326,7 +332,7 @@
 
             <ul>
 
-                <li>m = pendiente</li>
+                <li>a = pendiente</li>
 
                 <li>b = punto donde la gráfica corta el eje y</li>
 
@@ -384,7 +390,7 @@
 
                     <div class="formula">
 
-                        \( f(x)=mx+b \)
+                        \( f(x)=ax+b \)
 
                     </div>
 
@@ -434,6 +440,44 @@
 
         </section>
 
+        <!--FUNCIONES COMPUESTAS-->
+
+        
+        <section class="seccion">
+
+            <h2>📘 Función Compuesta</h2>
+
+            <p>
+               La <strong>función compuesta</strong> es aquella que se obtiene mediante una operación 
+                denominada <strong>composición de funciones,</strong> que consiste en aplicar de 
+                manera sucesiva las funciones que forman parte de la operación. Así, la función 
+                compuesta de \(f(x)\) y \(g(x)\) es otra función obtenida aplicando g a las imágenes de f.
+            </p>
+            <h2>Concepto de composición de funciones</h2><br>
+            <p>
+                Aplicando sucesivamente la función \(f(x)\) y la función \(g(x)\) sobre los valores de \(x\) obtenemos el 
+                mismo resultado que si aplicásemos directamente una función \((g o f)(x)\) sobre los valores de \(x\). A esta 
+                función se la denomina función compuesta de \(f\) y \(g\).
+            </p>
+
+             <h2>🧩 Notación y Lectura</h2>
+                •	Símbolo: \((g \circ f)(x)\)<br>
+                •	Se lee: "\(f\) compuesta con \(g(x)\) " o " \(g\) compuesta de \(f(x)\)".<br>
+                •	Operación: \((g \circ f)(x) =   g(f(x))\)<br>
+                <br>
+                <h2>Ejemplo de función compuesta</h2>
+                <h3>📌 Ejemplo \(f \circ g\)</h3><br>
+                \( f(x)=2x+5 \)<br>
+                \( g(x)=3x²+3 \)<br><br>
+<strong>Sustituyendo \(g(x)\) dentro de \(f(x)\):</strong><br><br>
+\((f \circ g)(x) = f(g(x))\)<br>
+\(= 2(3x²2+3)+5\)<br>
+\(=6x²2+6+5\)<br>
+\((f \circ g)(x)=6x^2+11\)
+
+
+            </div>
+</section>
         <!-- IMPORTANCIA -->
 
         <section class="seccion">
@@ -445,13 +489,7 @@
                 analizar cambios, predecir resultados y representar
                 relaciones matemáticas.
             </p>
-
-            <p>
-                Son una de las bases más importantes
-                de las matemáticas, la física,
-                la ingeniería y muchas ciencias.
-            </p>
-
+            
         </section>
 
         <!-- BOTON -->
@@ -479,3 +517,4 @@
 </body>
 
 </html>
+

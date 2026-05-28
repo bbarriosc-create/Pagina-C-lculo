@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysteries of the Universe - Mathematics</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Corregido el enlace de la tipografía de Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+
+<!-- IMPORTANTE: Mantén esta clase para proteger tus otras páginas -->
+<body class="observatorio-page">
+
+    <!-- Capa para tu imagen de fondo local 'planetas.jpg' -->
+    <div class="space-bg"></div>
+
+    <!-- Sección Central Principal sin franjas -->
+    <main class="hero-content">
+        <h1 class="main-title">MISTERIOS DE LAS FUNCIONES</h1>
+        <p class="subtitle">“Las matemáticas son el alfabeto con el cual Dios ha escrito el Universo”</p>
+    </main>
+
+    <!-- Las 3 divisiones inferiores interactivas -->
+    <footer class="media-stations">
+        <!-- Estación 1 -->
+        <div class="station-card" data-video="relacion.mp4">
+            <div class="station-content">
+                <span class="station-title">Relación</span>
+                <p class="station-hover-text">Explora las conexiones matemáticas elementales.</p>
+            </div>
+        </div>
+
+        <!-- Estación 2 -->
+        <div class="station-card" data-video="funcion.mp4">
+            <div class="station-content">
+                <span class="station-title">Qué es una función</span>
+                <p class="station-hover-text">Descubre la regla que rige el cosmos algebraico.</p>
+            </div>
+        </div>
+
+        <!-- Estación 3 -->
+        <div class="station-card" data-video="video.mp4">
+            <div class="station-content">
+                <span class="station-title">Función compuesta</span>
+                <p class="station-hover-text">Viaja a través de sistemas de funciones anidadas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ventana emergente (Modal) para reproducir los videos -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="close-modal">&times;</button>
+            <div class="video-wrapper">
+                <!-- Cambiado a una etiqueta video para reproducir tu archivo local video.mp4 -->
+                <video id="modalPlayer" src="" controls autoplay></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="script-videos.js"></script>
+</body>
+</html>

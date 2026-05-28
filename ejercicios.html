@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misiones Matemáticas - Simulador</title>
+    <link rel="stylesheet" href="estilo-ejercicios.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- CORREGIDO: Ahora carga localmente desde tu PC sin depender de internet, ¡será ultra rápido! -->
+    <script src="chart.js"></script>
+</head>
+<body class="game-body">
+
+    <div class="game-container">
+        <!-- Selector de Niveles -->
+        <header class="level-selector">
+            <div class="level-tab active" id="tab-linear">✓ LINEAL</div>
+            <div class="level-tab locked" id="tab-quadratic">🔒 CUADRÁTICA</div>
+            <div class="level-tab locked" id="tab-exponential">🔒 EXPONENCIAL</div>
+            <div class="level-tab locked" id="tab-composite">🔒 COMPUESTA</div>
+        </header>
+
+        <!-- Zona Principal de Juego -->
+        <main class="game-content">
+            
+            <!-- Columna Izquierda: El Desafío -->
+            <section class="challenge-panel">
+                <h2 id="challenge-title">Función Lineal</h2>
+                <!-- CORREGIDO: Ajustado el texto visual a / 2 aciertos de forma fija -->
+                <div class="progress-counter">Objetivo: <span id="current-score">0</span> / 2 aciertos</div>
+                
+                <div class="equation-box">
+                    <span id="equation-text">f(x) = 2x + 1</span>
+                </div>
+
+                <div class="input-section">
+                    <p class="instruction" id="question-text">Calcule el valor de f(3):</p>
+                    <div class="input-group">
+                        <label for="user-answer">Resultado f(x) =</label>
+                        <input type="number" id="user-answer" placeholder="?" autocomplete="off">
+                    </div>
+                    <button id="btn-verify">Verificar Coordenadas</button>
+                    <button id="btn-next" class="hidden">Siguiente Misión</button>
+                </div>
+
+                <div id="feedback-panel" class="feedback-box hidden">
+                    <p id="feedback-message"></p>
+                </div>
+            </section>
+
+            <!-- Columna Derecha: Gráfica -->
+            <section class="graph-panel">
+                <div class="canvas-wrapper">
+                    <canvas id="mathGraph"></canvas>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script-ejercicios.js"></script>
+</body>
+</html>

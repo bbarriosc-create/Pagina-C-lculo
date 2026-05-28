@@ -1418,3 +1418,211 @@ body {
     color: inherit;   /* Mantiene exactamente el mismo color del texto que lo rodea */
 }
 
+/* =========================================
+   VIDEOS ULTIMA PARTE PROYECTITO
+========================================= */
+/* ==========================================================================
+   ESTILOS EXCLUSIVOS PARA LA PÁGINA VIDEOS.HTML
+   (Gracias a la clase .observatorio-page, tus otras páginas no se alterarán)
+   ========================================================================== */
+
+/* Contenedor principal de la página de videos */
+.observatorio-page {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #020208 !important;
+    color: #ffffff !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Imagen de fondo local 'planetas.jpg' con filtro oscuro cinematográfico */
+.observatorio-page .space-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 140, 0, 0.08), transparent 60%), 
+                url('planetas.jpg') no-repeat center center/cover;
+    z-index: -1;
+    filter: brightness(0.65);
+}
+
+/* Títulos centrales (Sin barras de menús arriba) */
+.observatorio-page .hero-content {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto; /* Centrado vertical absoluto */
+    padding: 0 20px;
+}
+
+.observatorio-page .main-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+    color: #ffffff !important;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+}
+
+.observatorio-page .subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #d1d1d6 !important;
+    letter-spacing: 2px;
+}
+
+/* Las 3 divisiones de la barra inferior con efecto cristal (blur) */
+.observatorio-page .media-stations {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(2, 2, 8, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.observatorio-page .station-card {
+    flex: 1;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.observatorio-page .station-card:last-child {
+    border-right: none;
+}
+
+.observatorio-page .station-content {
+    padding: 0 30px;
+}
+
+.observatorio-page .station-title {
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #cccccc;
+    transition: color 0.3s, transform 0.4s;
+    display: block;
+}
+
+/* Pequeño texto descriptivo oculto al inicio */
+.observatorio-page .station-hover-text {
+    font-size: 0.8rem;
+    color: #ff9d6c; /* Tono naranja observatorio */
+    margin-top: 8px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    font-weight: 300;
+}
+
+/* --- INTERACCIONES AL PASAR EL MOUSE (HOVER) --- */
+.observatorio-page .station-card:hover {
+    background: rgba(255, 255, 255, 0.04); /* Se ilumina levemente */
+    border-top: 2px solid #ff9d6c; /* El borde superior se resalta */
+    transform: translateY(-4px); /* El botón se levanta un poco */
+    box-shadow: 0 -15px 30px rgba(255, 140, 0, 0.03);
+}
+
+.observatorio-page .station-card:hover .station-title {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.observatorio-page .station-card:hover .station-hover-text {
+    opacity: 1;
+    height: auto; /* Despliega el texto de forma fluida */
+}
+
+/* --- DISEÑO DE LA VENTANA EMERGENTE (MODAL) --- */
+.observatorio-page .video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Activa la ventana */
+.observatorio-page .video-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Fondo oscurecido total detrás del video */
+.observatorio-page .modal-backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.93);
+    backdrop-filter: blur(10px);
+}
+
+/* Contenedor del reproductor */
+.observatorio-page .modal-container {
+    position: relative;
+    width: 85%;
+    max-width: 950px;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+    z-index: 2001;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Botón de cerrar (X) */
+.observatorio-page .close-modal {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 2002;
+    transition: color 0.2s;
+}
+
+.observatorio-page .close-modal:hover {
+    color: #ff9d6c;
+}
+
+/* Contenedor con aspecto de cine 16:9 */
+.observatorio-page .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    background-color: #000;
+}
+
+/* Ajuste exacto para tu archivo video.mp4 */
+.observatorio-page .video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Evita que el video se deforme */
+}

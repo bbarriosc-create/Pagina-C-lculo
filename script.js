@@ -288,3 +288,6 @@ inputXValExp.addEventListener('input', drawExp);
 drawLineal();
 drawQuad();
 drawExp();
+/* =========================================
+   ULTIMA PARTE VIDEITOS
+========================================= */
